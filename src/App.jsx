@@ -1,10 +1,8 @@
-function App() {
+import { HomePage } from "./pages/HomePage"
+
+export const App = () => {
   
   return (
-    <h1 className='font-bold text-center'>
-        TP Integrador II
-    </h1>
+    <HomePage />
   )
 }
-
-export default App
