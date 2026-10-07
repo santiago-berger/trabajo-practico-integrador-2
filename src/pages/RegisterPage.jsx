@@ -45,8 +45,8 @@ export const RegisterPage = () => {
   // lo que devuelve el componente es el jsx que se dibuja en pantalla
   return (
     // onSubmit conecta el envio del formulario con handleSubmit
-    <form onSubmit={handleSubmit}>
-        <h1>Registrarse</h1>
+    <form onSubmit={handleSubmit} className="mx-auto mt-10 flex max-w-sm flex-col gap-3 p-4">
+        <h1 className="text-2xl font-bold">Registrarse</h1>
 
         {/* map recorre el array fields y por cada campo devuelve un <input>, el resultado es un array de inputs que react dibuja uno abajo del otro */}
         {fields.map((field) => (
@@ -64,14 +64,15 @@ export const RegisterPage = () => {
             value={formState[field.name]}
             // cada tecla dispara onChange, handleInputChange guarda el texto nuevo en formState y react vuelve a dibujar el input con ese valor
             onChange={handleInputChange}
+            className="rounded border p-2"
             />
       ))}
 
       {/* un button dentro de un form es de tipo submit por defecto, al hacer click dispara onSubmit del form */}
-      <button>Registrarme</button>
+      <button className="cursor-pointer rounded bg-blue-600 p-2 text-white">Registrarme</button>
 
       {/* Link cambia la url a /login sin recargar la pagina, para el usuario que ya tiene cuenta */}
-      <Link to="/login">¿Ya tenés cuenta? Iniciá sesión</Link>
+      <Link to="/login" className="text-blue-600">¿Ya tenés cuenta? Iniciá sesión</Link>
     </form>
   )
 }

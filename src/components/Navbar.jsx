@@ -2,9 +2,9 @@ import { Link } from 'react-router'
 
 export const Navbar = () => {
     return (
-        <nav>
+        <nav className="flex justify-between bg-blue-600 p-4 text-white">
             <Link to="/">Inicio</Link>
-            <button>Cerrar sesión</button>
+            <button className="cursor-pointer">Cerrar sesión</button>
         </nav>
     );
 };
