@@ -53,13 +53,15 @@ export const useFetch = (url) => {
     useEffect(() => {
         // el callback es la funcion que se ejecuta, llama a fetchData
         // no es async porque useEffect espera que el callback no devuelva nada, y una funcion async siempre devuelve una promesa
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         fetchData()
 
         // el array de dependencias le dice a react cuando volver a ejecutar el efecto
         // se ejecuta una vez al montar el componente y despues solo si cambia url
         // si el array estuviera vacio se ejecuta una sola vez
         // sin array se ejecutaria despues de cada render
-    }), [url]
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [url])
 
     // el hook entrega sus 3 estados en un objeto, asi la pagina que lo usa sabe que mostrar en cada momento
     // el indicador de carga mientras isLoading es true, el mensaje si hay error o la lista guardada en data
