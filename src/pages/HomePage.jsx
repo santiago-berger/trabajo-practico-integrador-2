@@ -12,7 +12,7 @@ export const HomePage = () => {
     if (error) return <p className="p-4 text-red-600">{error}</p>
 
     // si no hay articulos publicados muestra un mensaje
-    if (data.lenght === 0) return <p className="p-4">No hay artículos publicados</p>
+    if (data.length === 0) return <p className="p-4">No hay artículos publicados</p>
 
 
     // data es el array de articulos que devolvio el backend
@@ -28,7 +28,7 @@ export const HomePage = () => {
 
                     <p>{article.excerpt ?? "Sin resumen"}</p>
 
-                    <p className="text-sm text-gray-500">Autor: {article.autor?.username}</p>
+                    <p className="text-sm text-gray-500">Autor: {article.author?.username}</p>
 
                 </article>
             ))}
