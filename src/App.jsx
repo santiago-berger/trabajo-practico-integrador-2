@@ -1,8 +1,8 @@
-import { HomePage } from "./pages/HomePage"
+import { AppRouter } from "./router/AppRouter"
 
 export const App = () => {
   
   return (
-    <HomePage />
+    <AppRouter />
   )
 }
