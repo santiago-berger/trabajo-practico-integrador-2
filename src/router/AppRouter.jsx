@@ -2,7 +2,7 @@
 // BrowserRouter usa la url del navegador para saber que pagina mostrar
 // Routes agrupa todas las rutas y elige cual mostrar segun la url actual
 // Route define una ruta, que url le corresponde a que componente
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 
 // paginas de la aplicacion, cada una se muestra en una ruta distinta
 import { HomePage } from "../pages/HomePage";
@@ -39,6 +39,7 @@ export const AppRouter = () => {
             }
           />
         </Route>
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );
